@@ -14,4 +14,119 @@
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  font-style: var(--font-family);
+  padding: 0px 10px;
+}
+
+.header {
+  height: 100vh;
+  padding-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  grid-template-rows: repeat(4, min-content);
+}
+
+.rec-label {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 139%;
+  text-align: center;
+  color: #ff0070;
+  gap: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-self: end;
+  width: 52px;
+  height: 26px;
+}
+
+.rec-label::after {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+
+  /* Цвет заливки */
+  background-color: #ff0070;
+
+  /* СВЕЧЕНИЕ через box-shadow (аналог SVG-фильтра) */
+  box-shadow: 0 0 4px 2px #ff0070, 0 0 9px 4px rgba(255, 0, 112, 0.5);
+}
+
+.header__theme-menu {
+  margin-top: 39px;
+}
+
+.header__theme__menu-list {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  text-align: center;
+  color: #ff0070;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  text-align: center;
+  width: 70px;
+  height: 26px;
+  background: transparent;
+
+  color: var(--button-color);
+  border: 1px solid transparent;
+}
+
+.header__theme-menu-button_active {
+  border: var(--button-border);
+}
+
+.header__theme-menu-button:hover {
+  border: var(--button-border-hover);
+}
+
+.header__theme-menu-button:focus {
+  border-bottom: var(--button-border);
+  outline: none;
+}
+
+/* header-title */
+
+.header__title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 83%;
+  color: #db00ff;
+  text-shadow: 4px 4px 0 0 #ff0070;
+
+  margin-top: 65px;
+}
+
+/* Для мобильных */
+/* clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem) */
+
+/* Для планшета и десктопа */
+/* clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) */
+
+.header__subtitle {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 130%;
+  color: #000028;
+  background: #ff0070;
+
+  margin-top: 55px;
 }

@@ -11,4 +11,9 @@
   */
   --page-bg-image: url("../images/cover-image-dark.png");
   --page-bg-color: #1a1a1a;
+
+  /* header__theme-menu-button  */
+  --button-color: #ff0070;
+  --button-border: 1px solid #ff0070;
+  --button-border-hover: 1px solid rgba(255, 0, 112, 0.4);
 }

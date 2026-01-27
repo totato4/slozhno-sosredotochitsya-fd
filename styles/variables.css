@@ -4,6 +4,5 @@
 */
 
 :root {
-  --page-bg-image: url("../images/cover-image-dark.png");
-  --page-bg-color: #1a1a1a;
+  --font-family: "IBM Plex Mono", sans-serif;
 }

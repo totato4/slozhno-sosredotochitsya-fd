@@ -11,4 +11,7 @@
   */
   --page-bg-image: url("../images/cover-image-light.png");
   --page-bg-color: #fff3eb;
+  /* header__theme-menu-button  */
+  --button-color: #353430;
+  --button-border: 1px solid #353430;
 }
