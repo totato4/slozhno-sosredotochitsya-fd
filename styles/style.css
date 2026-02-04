@@ -8,6 +8,11 @@ body {
   background: var(--main-bg-color);
 }
 
+.title-decor {
+  color: var(--decorated-text-color);
+  background: var(--decorated-bg-color);
+}
+
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   font-family: var(--font-family);
@@ -19,11 +24,7 @@ body {
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-
   background-repeat: no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
 }
 
 .header {
@@ -102,14 +103,6 @@ body {
   margin-top: 65px;
   display: flex;
   justify-content: flex-end;
-}
-
-.header__theme__menu-list {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 100%;
-  text-align: center;
-  color: var(--decorated-bg-color);
 }
 
 .header__theme-menu-list {
@@ -269,14 +262,14 @@ body {
   line-height: 130%;
 }
 
-.text-block__heading_advice {
-  font-weight: 400;
-}
-
 .content-section__subtitle {
   font-weight: 400;
   font-size: 18px;
   line-height: 130%;
+}
+
+.text-block__heading_advice {
+  font-weight: 400;
 }
 
 .content-section__subtitle_advice {
@@ -448,18 +441,11 @@ body {
 
 /* стили написанные ниже приоритетней, необходимо для gallery, меньше кода */
 
-.title-decor {
-  color: var(--decorated-text-color);
-  background: var(--decorated-bg-color);
-}
-
 .text-block__link {
   text-shadow: 2px 2px var(--decorated-bg-color);
-}
 
-.text-block__link {
-  text-decoration: none; /* Убираем стандартное подчеркивание */
-  color: inherit; /* Наследуем цвет текста */
+  text-decoration: none;
+  color: inherit;
 }
 
 .text-block__link:hover {
