@@ -27,7 +27,7 @@
   --font-family: "IBM Plex Mono", monospace;
 }
 
-/* Стили для кнопок */
+/* Стили для кнопок  */
 :root {
   --button-border: 1px solid var(--button-border-color);
   --button-border-hover: 1px solid var(--button-border-hover-color);
