@@ -4,5 +4,31 @@
 */
 
 :root {
-  --font-family: "IBM Plex Mono", sans-serif;
+  /* Основные цвета */
+  --main-bg-color: #000028;
+  --text-color: #f1b2ce;
+  --title-color: #db00ff;
+  --accent-color: #ff0070;
+
+  /* Цвета декоративных элементов */
+  --decorated-bg-color: var(--accent-color);
+  --decorated-text-color: #000028;
+  --corner-color: var(--accent-color);
+
+  /* Кнопки меню */
+  --button-color: var(--accent-color);
+  --button-border-color: var(--accent-color);
+  --button-border-hover-color: rgba(255, 0, 112, 0.4);
+
+  /* Фон */
+  --page-bg-image: url("../images/cover-image-dark.png");
+
+  /* Шрифт */
+  --font-family: "IBM Plex Mono", monospace;
+}
+
+/* Стили для кнопок (общие для всех тем) */
+:root {
+  --button-border: 1px solid var(--button-border-color);
+  --button-border-hover: 1px solid var(--button-border-hover-color);
 }

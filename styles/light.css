@@ -1,17 +1,43 @@
 /*
   Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
+  Здесь только переопределение переменных
 */
 
 :root.theme-light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
-  --page-bg-image: url("../images/cover-image-light.png");
-  --page-bg-color: #fff3eb;
-  /* header__theme-menu-button  */
+  --main-bg-color: #fff1f7;
+  --text-color: #353430;
+  --title-color: #ffc2e6;
+  --accent-color: #ff8dcb;
+  --decorated-bg-color: var(--accent-color);
+  --decorated-text-color: #353430;
+  --corner-color: #353430;
   --button-color: #353430;
-  --button-border: 1px solid #353430;
+  --button-border-color: #353430;
+  --button-border-hover-color: rgba(50, 49, 45, 0.4);
+  --page-bg-image: url("../images/cover-image-light.png");
+}
+
+:root.theme-light .rec-label {
+  display: none;
+}
+
+/* Медиа-запрос для автоматической светлой темы */
+@media (prefers-color-scheme: light) {
+  :root {
+    --main-bg-color: #fff1f7;
+    --text-color: #353430;
+    --title-color: #ffc2e6;
+    --accent-color: #ff8dcb;
+    --decorated-bg-color: var(--accent-color);
+    --decorated-text-color: #353430;
+    --corner-color: #353430;
+    --button-color: #353430;
+    --button-border-color: #353430;
+    --button-border-hover-color: rgba(50, 49, 45, 0.4);
+    --page-bg-image: url("../images/cover-image-light.png");
+  }
+
+  .rec-label {
+    display: none;
+  }
 }
