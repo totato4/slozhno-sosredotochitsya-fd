@@ -174,7 +174,6 @@ body {
   .header {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(4, min-content);
-    min-block-size: calc(768px - 20px - 20px);
   }
 
   .header__theme-menu {
@@ -403,13 +402,16 @@ body {
 }
 
 .footer {
+  font-style: var(--font-family);
+
   margin-block-start: 50px;
   display: grid;
   justify-content: center;
   align-content: center;
   inline-size: calc(100vw - 10px - 10px);
   block-size: calc(100vh - 10px - 10px);
-  font-style: var(--font-family);
+
+  position: relative;
 }
 
 .footer__title {
@@ -424,6 +426,8 @@ body {
 @media (min-width: 768px) {
   .footer {
     margin-block-start: 80px;
+    max-inline-size: calc(1024px - 20px - 20px);
+    max-block-size: calc(1024px - 20px - 20px);
     inline-size: calc(100vw - 20px - 20px);
     block-size: calc(100vh - 20px - 20px);
   }
