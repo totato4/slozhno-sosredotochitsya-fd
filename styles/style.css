@@ -12,7 +12,6 @@ body {
 .page {
   font-family: var(--font-family);
   max-inline-size: 1024px;
-  padding: 10px;
   background-color: var(--main-bg-color);
   background-image: var(--page-bg-image);
   background-position: center;
@@ -26,18 +25,15 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: repeat(4, min-content);
   position: relative;
-  block-size: calc(100vh - 10px - 10px);
-}
-
-.decorated-zone {
-  position: relative;
+  block-size: 100vh;
+  padding: 10px;
 }
 
 .decorated-zone::before {
   content: "";
   position: absolute;
-  inset-block-start: 0;
-  inset-inline-end: 0;
+  top: 10px;
+  right: 10px;
   inline-size: 25.04px;
   block-size: 25px;
   border-block-start: 1px solid var(--corner-color);
@@ -48,8 +44,8 @@ body {
 .decorated-zone::after {
   content: "";
   position: absolute;
-  inset-block-end: 0;
-  inset-inline-start: 0;
+  left: 10px;
+  bottom: 10px;
   inline-size: 25.04px;
   block-size: 25px;
   border-block-end: 1px solid var(--corner-color);
@@ -59,7 +55,8 @@ body {
 
 .rec-label {
   position: absolute;
-  inset-inline-end: 9px;
+  right: 19px;
+  top: 10px;
   font-weight: 400;
   font-size: 18px;
   line-height: 139%;
@@ -143,12 +140,23 @@ body {
 }
 
 @media (min-width: 768px) {
-  .page {
+  .header {
     padding: 20px;
   }
 
-  .header {
-    block-size: calc(100vh - 20px - 20px);
+  .decorated-zone::before {
+    top: 20px;
+    right: 20px;
+  }
+
+  .decorated-zone::after {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .rec-label {
+    right: 29px;
+    top: 20px;
   }
 
   .header__theme-menu {
@@ -210,7 +218,9 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   gap: 50px;
-  margin-block-start: 50px;
+  margin-block-start: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .content-section {
@@ -291,8 +301,9 @@ body {
 
 @media (min-width: 768px) {
   .content {
-    margin-block-start: 80px;
+    margin-block-start: 60px;
     gap: 80px;
+    padding: 0 20px;
   }
 
   .content-section {
@@ -404,12 +415,13 @@ body {
 .footer {
   font-style: var(--font-family);
 
-  margin-block-start: 50px;
+  margin-block-start: 40px;
   display: grid;
   justify-content: center;
   align-content: center;
-  inline-size: calc(100vw - 10px - 10px);
-  block-size: calc(100vh - 10px - 10px);
+  block-size: 100vh;
+  padding-left: 10px;
+  padding-right: 10px;
 
   position: relative;
 }
@@ -425,11 +437,10 @@ body {
 
 @media (min-width: 768px) {
   .footer {
-    margin-block-start: 80px;
-    max-inline-size: calc(1024px - 20px - 20px);
-    max-block-size: calc(1024px - 20px - 20px);
-    inline-size: calc(100vw - 20px - 20px);
-    block-size: calc(100vh - 20px - 20px);
+    margin-block-start: 60px;
+    block-size: 100vh;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .footer__title {
