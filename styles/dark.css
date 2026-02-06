@@ -5,9 +5,31 @@
 */
 
 :root.theme-dark {
-  /* Все переменные уже определены в variables.css */
-  /* Можно добавить специфические стили, если нужны */
+  --main-bg-color: #000028;
+  --text-color: #f1b2ce;
+  --title-color: #db00ff;
+  --accent-color: #ff0070;
+  --decorated-bg-color: var(--accent-color);
+  --decorated-text-color: #000028;
+  --corner-color: var(--accent-color);
+  --button-color: var(--accent-color);
+  --button-border-color: var(--accent-color);
+  --button-border-hover-color: rgba(255, 0, 112, 0.4);
+  --page-bg-image: url("../images/cover-image-dark.png");
 }
-
-/* Медиа-запрос для автоматической темной темы не нужен - 
-   темная тема уже базовая в variables.css */
+/* Медиа-запрос для автоматической темной темы */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-bg-color: #000028;
+    --text-color: #f1b2ce;
+    --title-color: #db00ff;
+    --accent-color: #ff0070;
+    --decorated-bg-color: var(--accent-color);
+    --decorated-text-color: #000028;
+    --corner-color: var(--accent-color);
+    --button-color: var(--accent-color);
+    --button-border-color: var(--accent-color);
+    --button-border-hover-color: rgba(255, 0, 112, 0.4);
+    --page-bg-image: url("../images/cover-image-dark.png");
+  }
+}
