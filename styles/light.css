@@ -1,8 +1,3 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь только переопределение переменных
-*/
-
 :root.theme-light {
   --main-bg-color: #fff1f7;
   --text-color: #353430;
@@ -15,15 +10,11 @@
   --button-border-color: #353430;
   --button-border-hover-color: rgba(50, 49, 45, 0.4);
   --page-bg-image: url("../images/cover-image-light.png");
+  --rec-display: none;
 }
 
-:root.theme-light .rec-label {
-  display: none;
-}
-
-/* Медиа-запрос для автоматической светлой темы */
 @media (prefers-color-scheme: light) {
-  :root {
+  :root:not(.theme-dark):not(.theme-light) {
     --main-bg-color: #fff1f7;
     --text-color: #353430;
     --title-color: #ffc2e6;
@@ -35,9 +26,6 @@
     --button-border-color: #353430;
     --button-border-hover-color: rgba(50, 49, 45, 0.4);
     --page-bg-image: url("../images/cover-image-light.png");
-  }
-
-  .rec-label {
-    display: none;
+    --rec-display: none;
   }
 }
